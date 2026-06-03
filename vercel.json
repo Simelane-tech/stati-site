@@ -1,15 +1,13 @@
 {
-  "version": 2,
-  "builds": [
+  "rewrites": [
     {
-      "src": "stati-site/**",
-      "use": "@vercel/static"
+      "source": "/(.*)",
+      "destination": "/index.html"
     }
   ],
-  "routes": [
-    {
-      "src": "/(.*)",
-      "dest": "/stati-site/$1"
+  "functions": {
+    "api/**/*.js": {
+      "memory": 512
     }
-  ]
+  }
 }
