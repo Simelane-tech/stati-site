@@ -1631,7 +1631,8 @@ window.SITE_DATA = {
       date: '2025-12-01',
       readTime: '7 min read',
       gradient: 'gradient-primary',
-      image: 'assets/images/Sibeve Team/Aids%20Day.png'
+      image: 'assets/images/Sibeve Team/Aids%20Day.png',
+      link: 'blog-posts/understanding-world-aids-day.html'
     },
     {
       id: 'customer-appreciation-giveaway',
@@ -1641,7 +1642,8 @@ window.SITE_DATA = {
       date: '2025-11-7',
       readTime: '6 min read',
       gradient: 'gradient-accent',
-      image: 'assets/images/Sibeve Team/Giveaway.png'
+      image: 'assets/images/Sibeve%20Team/Giveaway.png',
+      link: 'blog-posts/customer-appreciation-giveaway.html' 
     },
     {
       id: 'strategic-branding-engine-of-modern-business',
@@ -1651,7 +1653,8 @@ window.SITE_DATA = {
       date: '2026-01-15',
       readTime: '8 min read',
       gradient: 'gradient-mixed',
-      image: 'assets/images/Promotional%20Items/Coporate%20Branding.png'
+      image: 'assets/images/Promotional%20Items/Coporate%20Branding.png',
+      link: 'blog-posts/strategic-branding-engine-of-modern-business.html'
     },
     {
       id: 'sibeve-golf-competition-mbabane',
@@ -1661,7 +1664,8 @@ window.SITE_DATA = {
       date: '2025-10-11',
       readTime: '5 min read',
       gradient: 'gradient-dark-green',
-      image: 'assets/images/Sibeve Team/golf.png'
+      image: 'assets/images/Sibeve%20Team/golf.png',
+      link: 'blog-posts/sibeve-golf-competition-mbabane.html'
     },
     {
       id: 'what-is-sublimation-printing-faq',
@@ -1671,7 +1675,8 @@ window.SITE_DATA = {
       date: '2025-01-18',
       readTime: '9 min read',
       gradient: 'gradient-primary',
-      image: 'assets/images/Apparel/Custom%20Sublimeted.jpeg'
+      image: 'assets/images/Apparel/Custom%20Sublimeted.jpeg',
+      link: 'blog-posts/what-is-sublimation-printing-faq.html'
     },
     {
       id: 'how-to-choose-promotional-products-faq',
@@ -1681,7 +1686,8 @@ window.SITE_DATA = {
       date: '2025-03-05',
       readTime: '8 min read',
       gradient: 'gradient-accent',
-      image: 'assets/images/Promotional%20Items/Coporate%20Gifts.jpeg'
+      image: 'assets/images/Promotional%20Items/Coporate%20Gifts.jpeg',
+      link: 'blog-posts/how-to-choose-promotional-products-faq.html'
     }
   ],
   team: [
@@ -1992,7 +1998,7 @@ function portfolioPage() {
 function blogPage() {
   return `
     ${heroCommon('Blog & Insights', `Branding <span class="gradient-text">Insights</span>`, 'Tips, trends, and expert advice to help you make the most of your branding and promotional strategy.')}
-    <section class="section"><div class="container"><div class="blog-grid">${blogPosts.map(post => `<article class="post-card card-hover ${revealClass('up')}"><div class="post-media">${placeholder(post.title, post.gradient, 260, post.image)}<div style="position:absolute;top:1rem;left:1rem;"><span class="badge" style="background:rgba(255,255,255,0.92);color:var(--primary-600);border:none;">${post.category}</span></div></div><div style="padding:1.5rem;"><div class="post-meta"><span>${icon('calendar')} ${new Date(post.date).toLocaleDateString('en-US',{month:'short',day:'numeric',year:'numeric'})}</span><span>${icon('clock')} ${post.readTime}</span></div><h3 style="margin-top:0.9rem;">${post.title}</h3><p class="text-muted" style="margin-top:0.6rem;">${post.excerpt}</p><div style="margin-top:1rem;color:var(--primary-600);font-weight:700;display:flex;gap:0.5rem;align-items:center;">Read More ${icon('arrowRight')}</div></div></article>`).join('')}</div><div style="margin-top:3rem;" class="panel ${revealClass('up')}"><div style="text-align:center;"><h3 class="heading-sm">More Articles Coming Soon</h3><p class="text-muted" style="max-width:38rem;margin:1rem auto 0;">We are working on bringing you more branding tips, industry insights, and marketing advice. Stay tuned.</p><a href="contact.html" class="btn" style="margin-top:1.25rem;">Subscribe for Updates</a></div></div></div></section>
+    <section class="section"><div class="container"><div class="blog-grid">${blogPosts.map(post => `<article class="post-card card-hover ${revealClass('up')}"><div class="post-media">${placeholder(post.title, post.gradient, 260, post.image)}<div style="position:absolute;top:1rem;left:1rem;"><span class="badge" style="background:rgba(255,255,255,0.92);color:var(--primary-600);border:none;">${post.category}</span></div></div><div style="padding:1.5rem;"><div class="post-meta"><span>${icon('calendar')} ${new Date(post.date).toLocaleDateString('en-US',{month:'short',day:'numeric',year:'numeric'})}</span><span>${icon('clock')} ${post.readTime}</span></div><h3 style="margin-top:0.9rem;">${post.title}</h3><p class="text-muted" style="margin-top:0.6rem;">${post.excerpt}</p><div style="margin-top:1rem;color:var(--primary-600);font-weight:700;display:flex;gap:0.5rem;align-items:center;"><a href="${post.link}">Read More ${icon('arrowRight')}</a></div></div></article>`).join('')}</div><div style="margin-top:3rem;" class="panel ${revealClass('up')}"><div style="text-align:center;"><h3 class="heading-sm">More Articles Coming Soon</h3><p class="text-muted" style="max-width:38rem;margin:1rem auto 0;">We are working on bringing you more branding tips, industry insights, and marketing advice. Stay tuned.</p><a href="contact.html" class="btn" style="margin-top:1.25rem;">Subscribe for Updates</a></div></div></div></section>
     <section class="section section-muted"><div class="container" style="text-align:center;"><div class="${revealClass('up')}"><div class="icon-box" style="margin:0 auto;">${icon('bulb')}</div><h3 class="heading-sm" style="margin-top:1rem;">Need Some Motivation?</h3><p class="text-muted" style="max-width:30rem;margin:0.75rem auto 0;">Check out our weekly inspiration board for brand motivation and growth tips.</p><a href="weekly-inspiration.html" class="btn-outline" style="margin-top:1.25rem;display:inline-flex;">Weekly Inspiration ${icon('arrowRight')}</a></div></div></section>
   `;
 }
