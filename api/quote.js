@@ -1,4 +1,4 @@
-const nodemailer = require('nodemailer');
+import nodemailer from 'nodemailer';
 
 const SMTP_USER = process.env.SMTP_USER || 'sibeve.sales@gmail.com';
 const SMTP_PASS = process.env.SMTP_PASS || '';

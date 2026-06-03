@@ -2,9 +2,9 @@
   "name": "static-site",
   "version": "1.0.0",
   "private": true,
+  "type": "module",
   "description": "Static site runner",
   "scripts": {
-    "start": "node server.js",
     "dev": "node server.js"
   },
   "dependencies": {
