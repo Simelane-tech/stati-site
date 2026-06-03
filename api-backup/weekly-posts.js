@@ -1,7 +1,7 @@
-import fs from 'fs';
-import path from 'path';
+const fs = require('fs');
+const path = require('path');
 
-export default async function handler(req, res) {
+module.exports = async function handler(req, res) {
   // CORS headers
   res.setHeader('Access-Control-Allow-Origin', '*');
   res.setHeader('Access-Control-Allow-Methods', 'GET, OPTIONS');
@@ -18,7 +18,7 @@ export default async function handler(req, res) {
   }
 
   try {
-    const postsDir = path.join(process.cwd(), 'public', 'assets', 'images', 'Weekly Posts');
+    const postsDir = path.join(process.cwd(), 'assets', 'images', 'Weekly Posts');
     const files = fs.readdirSync(postsDir);
     
     const imageExts = ['.jpg', '.jpeg', '.png', '.gif', '.webp'];

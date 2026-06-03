@@ -1,4 +1,4 @@
-import nodemailer from 'nodemailer';
+const nodemailer = require('nodemailer');
 
 const SMTP_USER = process.env.SMTP_USER || 'sibeve.sales@gmail.com';
 const SMTP_PASS = process.env.SMTP_PASS || '';
@@ -92,7 +92,7 @@ function buildQuoteEmails(data) {
   };
 }
 
-export default async function handler(req, res) {
+module.exports = async function handler(req, res) {
   // CORS headers
   res.setHeader('Access-Control-Allow-Origin', '*');
   res.setHeader('Access-Control-Allow-Methods', 'POST, OPTIONS');
